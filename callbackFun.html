@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function Userdefin(a,b,cb){
+//     let c=a+b
+//     let d=a-b
+//     return cb(c,d)
+// }
+// function sum(a,b){
+//     return a+b
+// }
+// let result1=Userdefin(10,30,function cb(c,d){
+//     return c-d
+// })
+// console.log(result1);
+// // console.log(Userdefin(8,2,sum));
+// let result2=Userdefin(30,20,function cb(c,d){
+//     return c*d
+// })
+// console.log(result2);
+
+// function ex(a,b,clb){
+//     let c=a+b
+//     let d=a-b
+//     let result=clb(c,d)
+//     return result
+// }
+// // function sum(a,b){
+// //     return a+b
+// // }
+
+// let result1=ex(4,3,function clb(c,d){
+//     return c+d
+// })
+// console.log(result1);
+// let result2=ex(6,4,function clb(c,d){//10+2
+//     return c*d
+// })
+// console.log(result2);
+
+// let arr=[1,2,3,4,5]
+// // arr.forEach(function(value,index,arr){
+// //     console.log(arr);
+// // })
+// function loopFun(arr,clb){
+//     for(let i = 0; i < arr.length; i++){
+//         clb(arr[i],i,arr)
+//     }
+// }
+// loopFun(arr,function(value,index,arr){
+//     console.log(value);
+// })
+
+
+let arr=[2,3,4,5,6]
+// arr.forEach(function(value,index,arr){
+//     console.log(value);
+// })
+
+// function myForeach(arr,clb){
+//     for(let i = 0; i < arr.length; i++){
+//         clb(arr[i],i,arr)
+//     }
+// }
+// myForeach(arr,function(val,index,arr){
+//     console.log(index+'='+val);
+// })
+ 
+//  arr.map(function(val){
+//     console.log(val);
+//  })
+
+function myMap(arr,clb){
+    let temp=[]
+    for(let i=0;i<arr.length;i++){
+        temp.push(arr[i])
+    }
+}
+
+myMap(arr,function(val){
+    console.log(val);
+})
+
+</script>
+</body>
+</html>

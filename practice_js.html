@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let students=['liton','raj','hm naim','naimul hasan']
+        // // students.forEach(function(value,index,students){
+        // //     console.log(students);
+        // // })
+        // function myBuildFun(students,clb){
+        //     for(let i=0;i<students.length;i++){
+        //         clb(students[i],i,students)
+        //     }
+        // }
+        // myBuildFun(students,function(val,index,arry){
+        //     console.log(arry);
+        // })
+
+        // function clback(a,b,clb){
+        //     let c=a+b//7
+        //     let d=a-b
+        //     let result=clb(c,d)
+        //     return result
+        // }
+        // let total2=clback(10,3,function(){
+
+        // })
+
+        // let total=clb(10,11,sum)
+        // // console.log(total);
+        // function clb(a,b){
+        //     return a*b
+        // }
+        // let total1=clb(2,5,sum)
+        // console.log(total1);
+
+
+
+        //higher order function
+        // function handler(a,b){
+        //    let total=sum()
+        //    return a+b+total
+        // }
+
+
+        // function sum(a,b){
+        //     let c=a+b
+        //     let d=a-b
+        // }
+        // console.log(sum(10,10));
+
+        // let arr1=[1,3,4,5,5,6,5]
+        // let arr2=[1,3,4,5,5,6,5,1]
+        // let arr3=[1,3,4,5,5,6,5]
+        // let arr4=[1,3,4,5,5,6,5,2]
+        // for(let i=0;i<arr1.length;i++){
+        //     console.log(arr1[i]);
+        // }
+        // let myArry=function(arr){
+        //     let sum=0
+        //     for(let i=0;i<arr.length;i++){
+        //         sum+=arr[i]
+        //     }
+        //     return sum
+        // }
+        //         let myArry=function(arr,clb){
+        //             for(let i=0;i<arr.length;i++){
+        //                 clb( arr[i],i,arr)
+        //             }
+        //         }
+        // myArry(arr4,function(value,index,arry){
+        //     console.log(index+'='+value);
+        // });
+
+        // function sum(a,b){
+        //     return a+b
+        // }
+        // let varia=[]
+        // varia.push(sum)
+        // console.log( varia[0](10,10));
+        // let obj={
+        //     sum:sum
+        // }
+        // console.log( obj.sum(20,20));
+
+        // function add(a,b){
+        //     return a+b
+        // }
+        // let data=add
+        // console.log(data(2,2));
+        // let arrys=[]
+        // arrys.push(add(10,10))
+        // console.log(arrys);
+        // let objct={
+        //     add:add
+        // }
+        // console.log(objct.add(30,30));
+
+        // function sum(a,b){
+        //     return a+b
+        // }
+        // function menupolate(a,b,fun){
+        //     let c=a+b//7
+        //     let d=a-b//3
+        //     function multiply(){
+        //         let m=fun(a,b)
+        //         return c*d*m
+        //     }
+        //     return multiply
+        // }
+        // let result=menupolate(5,2,sum)
+        // console.log(result());
+        // function ex(a,b,clb){
+        //     let c=a+b
+        //     let d=a-b
+        //     return clb(c,d)
+        // }
+        // function sum(a,b){
+        //     return a+b
+        // }
+        // let result=ex(10,20,function(c,d){
+        //     return c*d
+        // })
+        // console.log(result());
+
+        // let arry = [1, 2, 3, 4, 5, 6]
+        // arry.forEach(function(val,index,arr){
+        //     console.log(arr);
+        // })
+
+        // function fore(arr, clb) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         clb(arr[i],i)
+        //     }
+        // }
+        // fore(arry, function (val,index) {
+        //     console.log(val,index);
+        // });
+
+        // let arry = [1, 3, 5, 7]
+        // // let das=arry.every(function(value){
+        // //     return value%2==1
+        // // })
+        // // console.log(das)
+
+        // function myEv(arr, clb) {
+        //     for (let i = 0; i < arr.length; i++) {
+
+        //         if (clb(arr[i]) > 0 || clb(arr[i] > 1 || clb(arr[i] % 2 == 0))) {
+        //             return clb(arr[i])
+        //         }
+        //     }
+        // }
+
+        // let result = myEv(arry, function (val) {
+        //     return val % 2 == 0
+        // })
+        // console.log(result)
+
+        //    let v= arry.map(function (val) {
+        //         return 'hello'
+        //     })
+        //     console.log(arry);
+        //     console.log(v);
+        // function myMap(arr, clb) {
+        //     let newArry = []
+        //     for (let i = 0; i < arr.length; i++) {
+        //         let temp = clb(arr[i]);
+        //         newArry.push(temp)
+        //     }
+        //     return newArry
+        // }
+        // myMap(arry, function (value) {
+        //     console.log(value)
+        // })
+
+        // let filterArry = arry.filter(function (val) {
+        //     return val % 2 == 0
+        // })
+        // console.log(filterArry);
+
+        // function Myfillter(arr, cllb) {
+
+        //     let newArryFillter = []
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (cllb(arr[i], i, arr)) {
+
+        //             newArryFillter.push(arr[i])
+
+        //         }
+        //     }
+        //     return newArryFillter
+        // }
+        // console.log(Myfillter(arry, function (val) {
+        //     return val % 2 == 1;
+        // }));
+
+        // let findVal=arry.find(function(value){
+        //     return value==10
+        // })        
+        // console.log(findVal);
+
+        // function myFind(arr,clb){
+        //     for(let i = 0; i < arr.length; i++){
+        //         if(clb(arr[i])){
+        //             return i
+        //         }
+        //     }
+        // }
+
+        // let dataFind=myFind(arry,function(val,index){
+        //     return val==11
+        // })
+        // console.log(dataFind)
+
+        // function userMsg(msg){
+        //     function UserName(name){
+        //         return `${name},${msg}!`
+        //     }
+        //     return UserName
+        // }
+        // let message=userMsg('Thanks for watching my video')
+        // let user_name=message('Liton das')
+        // console.log(user_name)
+        // let gd_mr9=userMsg('good morning liton')
+        // let gd_ng=gd_mr9('good night liton')
+        // console.log(gd_mr9())
+        // console.log(gd_ng)
+
+        // function sum(n) {
+        //     if (n == 1) {
+        //         return 1
+        //     }
+        //     return n + sum(n - 1)
+        // }
+        // console.log(sum(8));
+
+        //Recursive function in javascript
+        //================Example==============
+        // function sum(a) {
+        //     if (a == 1) {
+        //         return 1
+        //     } else {
+        //         return a + sum(a - 1)
+        //     }
+
+        // }
+        // console.log(sum(2));
+
+
+        //curring function
+        //======Example====
+        // function sum(a) {
+        //     function num1(b) {
+        //         function total(c) {
+        //             return a + b + c
+        //         }
+        //         return total
+        //     }
+        //     return num1
+        // }
+        // let result = sum(10)(13)(17)
+        // console.log(result);
+
+        // function text(txt) {
+        //     return function msg(messge) {
+        //         return function out(all) {
+        //             return txt + messge + all
+        //         }
+        //     }
+        // }
+        // let fnOutPut = text('hello')(' dear sir check your code properly')(' your total message is 20')
+        // console.log(fnOutPut)
+
+
+        //function composition
+        //=======Example======
+        // function num1(a){
+        //     return a
+        // }
+        // function num2(b){
+        //     return b
+        // }
+        // function num3(d,c){
+        //     return d+c
+        // }
+        // let res=num1(num2(num3(2,20)))
+        // console.log(res);
+
+
+
+        //function scop
+        //====Example====
+
+        // let y=30
+        // function x(){
+        //     console.log(y);
+        // }
+        // x()
+
+        //lexical scope function in js
+        function first() {
+            let msg = 'hey iam lexical function don\'t scare me'
+            return function () {
+                console.log(msg);
+            }
+        }
+        let result = first()
+        result()
+
+        let obj={
+            name:'liton das',
+            age:20,
+            city:'Bangladesh',
+            district:'Gazipur'
+        }
+
+        function objct(obj){
+            for(let i=0;i<obj.length;i++){
+                console.log()
+            }
+        }
+        
+
+
+        //js hexa & octa number
+        // let hexadesimale=0xff
+        // let octa=0o756
+        // console.log('Iam a octa number'+octa)
+        // console.log('Iam a hexadesimale number'+hexadesimale);
+
+
+        // //js date function
+        // let obj = {
+        //     name: 'liton',
+        //     age: 26,
+        //     country: 'Bangladesh',
+        //     district: 'Gazipur'
+        // }
+        // function objc(get_obj) {
+        //     for (let i = 0; i < get_obj.length; i++){
+        //      // return  get_obj.name
+        //      console.log(get_obj.name);
+        //     }
+        // }
+        // objc(obj)
+        // // let data = objc(obj)
+        // // console.log(data);
+
+
+        // if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition(function (position) {
+        //         var lat = position.coords.latitude;
+        //         var long = position.coords.longitude;
+        //         var point = new google.maps.LatLng(lat, long);
+        //         new google.maps.Geocoder().geocode(
+        //             { 'latLng': point },
+        //             function (res, status) {
+        //                 var zip = res[0].formatted_address.match(/,\s\w{2}\s(\d{5})/);
+        //                 $("#location").val(zip);
+        //             }
+        //         );
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="top" style="width: 100vw;height: 100px;background-color: red;"></div>
+        <div class="peragraph">
+            <p id="peara">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore labore maiores dolorum nisi pariatur
+                ad obcaecati autem perspiciatis tempora asperiores laboriosam minima quia rerum maxime, dolores ipsam a
+                illo delectus?
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore labore maiores dolorum nisi pariatur
+                ad obcaecati autem perspiciatis tempora asperiores laboriosam minima quia rerum maxime, dolores ipsam a
+                illo delectus?
+            </p>
+            <p id="cha" style="display: flex;">
+            </p>
+            <ul id="cha1" style="font-weight: 800;"></ul>
+            <ul id="cha2" style="font-weight: 800;"></ul>
+
+            <button id="myBtn">click</button>
+            <button id="myBtn2">click</button>
+        </div>
+    </div>
+<script>
+    //for only id
+    //it's a pure function example
+
+    // function dom(id){
+    //     return document.getElementById(id)
+    //     //return domEle
+    // }
+
+    //for only id
+    //it's a pure arrow function example
+
+    const dom=(id)=>{//arrow function
+        return document.getElementById(id)
+        //return domEle
+    }
+    
+    dom('myBtn').addEventListener('click',myClickFun)
+    function myClickFun(){
+     dom('cha1').innerHTML+='hi iam liton das iam try to add click event'+'</br>'
+    }
+        
+    
+    dom('myBtn2').addEventListener('click',function(){
+        dom('cha2').innerHTML="hello iam raj das iam try to learn javascript language"
+    })
+
+/*
+    //first class function in js
+    //=========Example==========
+    //A function we can store in a variable
+    //Example Here
+    function add(a,b){
+        return a+b
+    }
+  let sum=add(10,20)
+  console.log(sum);
+  //A function we can stored in an arry
+  //Example Here
+  let arr=[]
+  arr.push(add)
+  console.log(arr[0](10,50));
+
+  //A function we can stored in an object
+  //Example Here
+  let obj={
+    sum:add
+  }
+  console.log(obj);
+  console.log(obj.sum(90,10));
+  //we can created function as need
+
+*/
+
+ /*
+ 
+ //const ele = document.getElementById("peara")
+        //ele.style.color = "red";
+        // function color(color) {
+        //     return ele.style.color = color;
+        // }
+        // color("red")
+        // document.getElementById("btn").addEventListener = ("click", function () {
+        //     alert("hello")
+        // })
+        // document.getElementById("myBtn").addEventListener("click", function () {
+        //     alert("Hello World!");
+        // });
+
+        //         const myText = "I am a string";
+        // const newString = myText.replace("I", "liton");
+        // console.log(newString);
+        // the replace() string function takes a source string,
+        // and a target string and replaces the source string,
+        // with the target string, and returns the newly formed string
+
+        // const num=[11,22,33,44,22,33,44,44];
+        // // num.forEach(function(_,__,arry){//if i need only index give arguments one andur squr
+        // //     console.log(arry);
+        // // });
+        // let sum=0;
+        // num.forEach(function(num){
+        //     sum+=num
+        // })
+        // console.log(sum);
+
+        //Escape Notation
+        //======Example====
+        // let str='hello iam liton das it\'s iam a \'programmer\'';
+        //     console.log(str);
+
+        //js string method
+        //=====Eample=====
+        // let joinStr='iam';
+        // let join='Liton';
+        // console.log(joinStr.concat(' ',join));//first variable and second variable both string are join using this method
+        // console.log(join.substr('','3'))//substr function work for remove word this first cotestion is start position '',and second one is '' end position
+
+        // let str='hi iam a programmer';
+        // let strlg=str.length
+        // setInterval(function(){//character print using the interval function
+        //     for(i=0;i<=strlg;i++){
+        //     if(i==0){
+        //         document.getElementById('cha').innerHTML=(str.charAt(i))
+        //         console.log(str.charAt(i));
+        //     }else if(i==1){
+        //         document.getElementById('cha2').innerHTML=(str.charAt(i++))
+        //         console.log(str.charAt(i++))
+        //     }
+        // }
+        // },2000)
+
+        //for(i=0;i<=strlg;i++){
+        //     if(i==0||i==strlg||strlg==i){
+        //         console.log(str.charAt(i));
+        //     }else{
+        //         console.log(str.charAt(i++))
+        //     }
+        // }
+
+        //js arry how to design & syintext
+        //============Example=============
+        // let multiName=['Liton','limon',11,'anisol',222,'hm naim','naimul hasan','hablu','ajay'];
+        // multiName[8]=[1,2,3,4,5,6,7];//add more data in one arry
+        // multiName.push('hello')//push data inside arry and add data last index
+        // multiName.unshift('hey')//push data inside arry and add data first index
+        // multiName.splice(1,0,'hello')//push data inside arry any position if need remove using the same function 
+        // for(i=0;i<=multiName.length-1;i++){
+        //     console.log(multiName[i]);
+        // }
+        
+        //2dimentional arry
+        //=======Example=====
+        
+        // let student=[
+        //     [10,20,30,40,50,70],
+        //     [10,2,3,55,6],
+        //     ['liton','hm naim','naimul hasan'],
+        //     name=['hello','iam','a programer'],
+        //     roll=[202,101,203],
+        //     name2=['hello','iam','a programer'],
+        //     roll2=[202,101,203]
+        // ]
+        // let dom=document.getElementById('cha2');
+        // for(i=0;i<=student.length-1;i++){
+        //     for(j=0;j<=student[i].length-1;j++){
+        //         dom.innerHTML=`<li>${student[j]}</li>`
+        //         console.log(student[i][j]);
+        //     }
+        // }
+
+        //object litaral
+        //====Example===
+        // let ob={
+        //     name:'liton',
+        //     City:'Dhaka'
+        // }
+        // //ob.name="kk"//update inside the object data
+        // ob.country='Bangladesh'//add inside the object
+        // console.log(ob);
+
+        // //object constructor
+        // //=======Example=====
+        // let conObj=Object();//
+        // conObj.a=10
+        // console.log(conObj)
+        // let conObj2=new Object();
+        // conObj2.b=20;
+        // console.log(conObj2)
+
+    //oterate object propati
+    //========Example========
+    // let obj={
+    //     name:'liton',
+    //     city:'Bangladesh',
+    //     District:'Gazipur'
+    // }
+    // console.log('name' in obj);//it's working like find in object propati i mean access in object propati
+    // for(objs in obj){
+    //     console.log(obj[objs])//If you want to access the property via variables using the arry notation
+    // }
+    // let obj2=Object.assign({},obj);//clone first object and assign in second object
+    // obj2.name='Hey';
+    // //console.log(obj)
+    // console.log(obj)
+    // console.log(obj2)
+
+    //function arguments and peramitter
+    //===========Example===============
+    // function add(a,b){
+    //     let result=a+b;
+    //     console.log(result);
+    // }
+    // add(10,20)
+    // add(10,2)
+    // add(10,100)
+    // add(10,10)
+
+    // let arryOne=[1,1,1];
+    // let arryTwo=[1,2,3,4,5];
+    // let arryThree=[1,1,2,2,1];
+    // function arryOfSum(arry){
+    //     let sum=0;
+    //for(let i=0;i< arry.length;i++){
+    //         sum+=arry[i];
+    //     }
+    //     // console.log(sum);
+    //      return sum;
+    // }
+    // console.log(arryOfSum(arryOne));
+    // console.log(arryOfSum(arryTwo));
+    // console.log(arryOfSum(arryThree));
+    // arryOfSum(arryOne)
+    // arryOfSum(arryTwo)
+    // arryOfSum(arryThree)
+
+    //function expresstion
+    //======Example=======
+    // let add=function(a,b){//if we need to store the function in the variable we can it's possible
+    //     return a+b
+    // }
+    // console.log(add(10,10));
+    // console.log(add(20,10));
+
+    //inner function
+    //=====Example===
+//    function somthing(greet,name){
+//     function getFirstname(){
+//         if(name){
+//             return name.split(' ',[0])
+//         }else{
+//             console.log('invalid first_name');
+//         }
+//     }
+//         let message=greet+' '+name+' '+getFirstname()
+//         console.log(message)
+    
+//}
+//somthing('hello','liton')
+ 
+ */
+/*       
+
+ //higher order function Example
+ //==============================
+ function add(a,b){
+    return a+b
+ }
+
+ function menupulate(a,b,func){
+    let c=a+b//6
+    let d=a+b//6
+    function multiply(){
+        let total=func(a,b)//6
+        return c*d*total
+    }
+return multiply
+ }
+ let multipy=menupulate(8,5,add)
+ console.log(multipy());
+*/
+
+
+ //callback function Example Here
+ //==============================
+// function clB(a,b,cb){
+//     let summition=a+b
+//     let submition =a-b
+//     let result=cb(summition,submition);
+//     return result
+// }
+// function cb(a,b){
+//     return a*b
+// }
+// console.log(clB(10,8,cb));
+// let result=clB(10,20,function cb(summition,submition){
+//     return summition-submition
+// })
+// console.log(result);
+// let result2=clB(10,20,function cb(summition,submition){
+//     return summition/submition
+// })
+// console.log(result2);
+
+
+//inner function
+function getDataFromUser(name,email){
+    function getData(){
+        // console.log(name,email)
+        if(name && email){
+            console.log(name,email)
+        }
+    }
+    getData()
+}
+getDataFromUser('liton','liton das')
+</script>
+</body>
+
+</html>
